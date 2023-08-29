@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="heading">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="links-1">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="links-2">
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Community</a></li>
+
+                </ul>
+            </div>
+
+        </aside>
+
+        <header class="header">
+            <div class="search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>magnify</title>
+                    <path
+                        d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                </svg>
+                <input type="search" name="search" id="search">
+            </div>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>bell-outline</title>
+                    <path
+                        d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z" />
+                </svg>
+                <img class="logo"
+                    src="data:image/jpeg;base64,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"
+                    alt="logoimage">
+                <div class="name">Likhitha Vakalapudi</div>
+            </div>
+            <div class="profile-details">
+                <img class="logo"
+                    src="data:image/jpeg;base64,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"
+                    alt="logoimage">
+                <div class="profile-data">
+                    <div class="greet">Hi there,</div>
+                    <div class="name">Likhitha Vakalapudi (@Likhitha)</div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button">New</button>
+                <button type="button">Upload</button>
+                <button type="button">Share</button>
+            </div>
+        </header>
+
+        <article class="article">
+            <div class="left-article">
+                <h2>Your Projects</h2>
+                <div class="projects">
+                    <div class="box-1 card">
+                        <h3>SuperCool Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laboriosam nobis dolor ut laudantium, ipsam delectus quisquam vero, molestiae quo reiciendis sequi esse ea! Qui autem temporibus tempora placeat illo.</p>
+                        <div class="project-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                        </div>
+                    </div>
+                    <div class="box-2 card">
+                        <h3>SuperCool Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laboriosam nobis dolor ut laudantium, ipsam delectus quisquam vero, molestiae quo reiciendis sequi esse ea! Qui autem temporibus tempora placeat illo.</p>
+                        <div class="project-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                        </div>
+                    </div>
+                    <div class="box-3 card">
+                        <h3>SuperCool Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laboriosam nobis dolor ut laudantium, ipsam delectus quisquam vero, molestiae quo reiciendis sequi esse ea! Qui autem temporibus tempora placeat illo.</p>
+                        <div class="project-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                        </div>
+                    </div>
+                    <div class="box-4 card">
+                        <h3>SuperCool Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laboriosam nobis dolor ut laudantium, ipsam delectus quisquam vero, molestiae quo reiciendis sequi esse ea! Qui autem temporibus tempora placeat illo.</p>
+                        <div class="project-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                        </div>
+                    </div>
+                    <div class="box-5 card">
+                        <h3>SuperCool Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laboriosam nobis dolor ut laudantium, ipsam delectus quisquam vero, molestiae quo reiciendis sequi esse ea! Qui autem temporibus tempora placeat illo.</p>
+                        <div class="project-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                        </div>
+                    </div>
+                    <div class="box-6 card">
+                        <h3>SuperCool Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laboriosam nobis dolor ut laudantium, ipsam delectus quisquam vero, molestiae quo reiciendis sequi esse ea! Qui autem temporibus tempora placeat illo.</p>
+                        <div class="project-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star-plus-outline</title><path d="M5.8 21L7.4 14L2 9.2L9.2 8.6L12 2L14.8 8.6L22 9.2L18.8 12H18C17.3 12 16.6 12.1 15.9 12.4L18.1 10.5L13.7 10.1L12 6.1L10.3 10.1L5.9 10.5L9.2 13.4L8.2 17.7L12 15.4L12.5 15.7C12.3 16.2 12.1 16.8 12.1 17.3L5.8 21M17 14V17H14V19H17V22H19V19H22V17H19V14H17Z" /></svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-article">
+                <div class="announcements">
+                    <h2>Announcements</h2>
+                    <div class="announcement-content">
+                        <div class="announcement-items ac-item1">
+                            <h4>Site Maintainance</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde sequi delectus quas quae at illum quasi magni? Quia iure sequi iste cum.</p>
+                        </div>
+                        <div class="announcement-items ac-item2">
+                            <h4>Site Maintainance</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="announcement-items ac-item3">
+                            <h4>Site Maintainance</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde sequi delectus quas quae at illum quasi magni? Quia iure sequi iste cum, labore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending">
+                    <h3>Trending</h3>
+                    <div class="trending-items">
+                        <div class="tr-item">
+                            <img src="https://img.freepik.com/premium-vector/avatar-portrait-young-caucasian-boy-man-round-frame-vector-cartoon-flat-illustration_551425-19.jpg?w=2000" alt="Treding item">
+                            <span>
+                                <div>@Tegan</div>
+                                <div>World Peace Builder</div>
+                            </span>
+                        </div>
+                        <div class="tr-item">
+                            <img src="https://img.freepik.com/premium-vector/avatar-portrait-young-caucasian-boy-man-round-frame-vector-cartoon-flat-illustration_551425-19.jpg?w=2000" alt="Treding item">
+                            <span>
+                                <div>@Tegan</div>
+                                <div>World Peace Builder</div>
+                            </span>
+                        </div>
+                        <div class="tr-item">
+                            <img src="https://img.freepik.com/premium-vector/avatar-portrait-young-caucasian-boy-man-round-frame-vector-cartoon-flat-illustration_551425-19.jpg?w=2000" alt="Treding item">
+                            <span>
+                                <div>@Tegan</div>
+                                <div>World Peace Builder</div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
